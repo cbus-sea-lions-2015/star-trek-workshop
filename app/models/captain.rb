@@ -16,4 +16,8 @@ class Captain < ActiveRecord::Base
     @password ||= Password.new(self.password_hashy_digest)
   end
 
+  def self.authenticate(username, password)
+    captain = Captain.find_by(username: username)
+    captain if captain && captain.password == password
+  end
 end
