@@ -18,7 +18,7 @@ class CreateSchema < ActiveRecord::Migration
       t.string :rank
     end
 
-    create_table :roster do |t|
+    create_table :rosters do |t|
       t.references :crew_member
       t.references :duty
     end
