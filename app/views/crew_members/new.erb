@@ -1,0 +1,13 @@
+<form action="/ships/<%= @ship.id %>/crew_members" method="post">
+  <div>
+    <label for="crew_member[name]">Name</label>
+    <input type="text" name="crew_member[name]">
+  </div>
+  <div>
+    <label for="crew_member[rank]">Rank</label>
+    <input type="text" name="crew_member[rank]">
+  </div>
+  <div>
+    <input type="submit" value="Create!">
+  </div>
+</form>

@@ -1,0 +1,7 @@
+<h1>Starfleet</h1>
+<ul>
+  <% @ships.each do |ship| %>
+  <li><a href="<%= ship_path(ship) %>"><%= ship.name %></a></li>
+  <% end %>
+</ul>
+<a href="<%= new_ship_path %>">Add a ship</a>

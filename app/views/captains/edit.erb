@@ -1,0 +1,28 @@
+<!-- UPDATE -->
+<form action="/captains/<%= @captain.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div>
+    <% if @captain.errors.count > 0 %>
+      <p>Please fix the following errors!</p>
+      <ul>
+        <% @captain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <div>
+    <label for="">Name:</label>
+    <input type="text" name="captain[name]" value="<%= @captain.name %>" />
+  </div>
+
+  <div>
+    <label for="">Username:</label>
+    <input type="text" name="captain[username]" value="<%= @captain.username %>" />
+  </div>
+
+  <div>
+    <input type="submit" value="Update">
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<h1><%= @ship.name %></h1>
+<p>Captain: <%= @ship.captain.name if @ship.captain %></p>
+<p>Crew:</p>
+<ul>
+  <% @ship.crew_members.each do |sailor| %>
+  <li><%= sailor.name %></li>
+  <% end %>
+</ul>
+<p><a href="/ships/<%= @ship.id %>/crew_members/new">Add a crew member</a></p>
+
+<a href="<%= edit_ship_path(@ship) %>">Edit</a> |
+<form action="<%= ship_path(@ship) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>

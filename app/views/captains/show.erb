@@ -1,0 +1,4 @@
+<h2><%= @captain.name %></h2>
+<p>Captain of the: <a href="<%= ship_path(@captain.ship) %>"><%= @captain.ship.name %></a></p>
+
+<p><a href="/captains/<%= @captain.id %>/edit">Edit</a></p>

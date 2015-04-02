@@ -13,3 +13,14 @@ post '/sessions' do
     erb :"sessions/new"
   end
 end
+
+# logout?
+get '/logout' do
+  # clear the id we stored in the session
+  session.delete(:id)
+  # session[:id] = nil
+  # session.clear # zomg... kill it all with fire.
+
+  # redirect back to index or login
+  redirect '/'
+end

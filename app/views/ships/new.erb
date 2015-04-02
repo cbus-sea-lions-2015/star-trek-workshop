@@ -1,0 +1,9 @@
+<form action="<%= ships_path %>" method="post">
+  <div>
+    <label for="">Name</label>
+    <input type="text" name="ship[name]" value="<%= @ship.name %>">
+  </div>
+  <div>
+    <input type="submit" value="Create">
+  </div>
+</form>
